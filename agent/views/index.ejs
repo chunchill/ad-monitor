@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  
+   <a href="#">
+        <img id="btnMonitor" src="http://p3.ifengimg.com/a/2016_46/ebfb4b1e87ab2f7.jpg">
+   </a>
+    
+    <script>
+    $(function(){
+      $("#btnMonitor").click(function(){
+        $.get("http://localhost:9000/",{src:'sina'},function(data){
+        });
+      });
+    });
+    </script>
+  </body>
+</html>
